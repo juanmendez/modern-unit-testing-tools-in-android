@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testImplementation("org.junit.jupiter:junit-jupiter:5.4.0")
 }
 
 compileKotlin {
