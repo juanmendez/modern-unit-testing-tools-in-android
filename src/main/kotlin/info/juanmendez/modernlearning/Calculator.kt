@@ -23,4 +23,9 @@ class Calculator {
         return a / b * 1.0
     }
 
+    fun makeError(throwable: Throwable): Boolean {
+        throw throwable
+        return true
+    }
+
 }
