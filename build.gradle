@@ -20,10 +20,21 @@ repositories {
     jcenter()
 }
 
+test {
+    environment "MY_ENV_VAR", "true"
+
+    useJUnitPlatform {
+        excludeTags "slow"
+    }
+
+    systemProperty "juni5.jupiter.execution.parallel.enabled", "true"
+}
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testImplementation "org.mockito:mockito-core:2.23.0"
     testImplementation("org.junit.jupiter:junit-jupiter:5.4.2")
+    testImplementation("com.squareup.moshi:moshi:1.8.0")
 }
 
 compileKotlin {
